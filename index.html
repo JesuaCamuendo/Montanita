@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montañita Viva | Lo que pasa aquí...</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+    <source src="0416.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="social-top-bar">
+    <a href="https://www.instagram.com/jawar.17?igsh=Zm8zd2oyanJjOXl5" target="_blank" class="social-icon">
+        <img src="ig-02.png" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@jawar.bm?_r=1&_t=ZS-95ZtKiQa4Qu" target="_blank" class="social-icon">
+        <img src="tiktok-02.png" alt="TikTok">
+    </a>
+    <a href="https://open.spotify.com/intl-es/album/2C9JCdEV9fpEFOS7mEVRO2?si=iXVMdHtBRbetZ1W95pK4Tw" target="_blank" class="social-icon">
+        <img src="spotify-02.png" alt="Spotify">
+    </a>
+</div>
+    <div class="overlay"></div>
+    
+    <header>
+        <h1 class="logo">Lo que pasa en Montañita, <br><span>se queda en Montañita</span></h1>
+        
+        <p class="sub-callout">Cuenta tu historia anónimamente.</p>
+
+        <nav>
+            <ul>
+            <li><a href="#" class="filter-btn active" data-category="inicio">Inicio</a></li>
+            <li><a href="#" class="filter-btn" data-category="parejas">Parejas</a></li>
+            <li><a href="#" class="filter-btn" data-category="amigos">Amigos</a></li>
+            <li><a href="#" class="filter-btn" data-category="ex">Ex</a></li>
+            <li><a href="#" class="filter-btn" data-category="mosas">Mosas</a></li>
+            <li><a href="#" class="filter-btn" data-category="extranjeros">Extranjeros</a></li>
+            <li><a href="#" class="filter-btn" data-category="otro">Otro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="feed">
+        <article class="post-card">
+            <div class="category-tag tag-amigos">Amigos</div>
+            <p>"Nos perdimos buscando el 'after' y terminamos viendo el amanecer en la punta. La mejor noche."</p>
+            <span class="author">- Anónimo en la Calle de los Cócteles</span>
+            <div class="actions">
+                <button class="btn-love">🔥 +1</button>
+            </div>
+        </article>
+
+        </main>
+
+    <button class="fab-post" title="Contar mi historia">+</button>
+
+    <div id="modalHistoria" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>¿Qué pasó en Montañita?</h2>
+        <form id="storyForm">
+            <div class="form-group">
+                <label>Tu apodo (o déjalo en blanco para ser Anónimo)</label>
+                <input type="text" id="autor" placeholder="Ej: El Surfer Loco">
+            </div>
+            
+            <div class="form-group">
+                <label>Categoría</label>
+                <select id="categoria" required>
+                    <option value="parejas">Parejas</option>
+                    <option value="amigos">Amigos</option>
+                    <option value="ex">Ex</option>
+                    <option value="mosas">Mosas</option>
+                    <option value="extranjeros">Extranjeros</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tu historia</label>
+                <textarea id="contenido" rows="5" placeholder="Suelta el chisme aquí..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Publicar en Montañita 🔥</button>
+        </form>
+    </div>
+</div>
+</body>
+<script type="module" src="script.js"></script>
+</html>
