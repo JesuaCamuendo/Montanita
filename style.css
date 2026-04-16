@@ -444,24 +444,35 @@ nav a:hover, nav a.active {
 }
 
 .music-control {
-    position: fixed;
-    top: 12px; /* Ajustado para que no tape tus iconos de redes */
-    left: 20px;
+    position: absolute; /* Cambiado a absolute para que se quede arriba y no te siga al bajar */
+    top: 15px;          /* Distancia desde el borde superior */
+    left: 15px;         /* Distancia desde el borde izquierdo */
     background: white;
     color: black;
     border: none;
-    padding: 5px 12px;
+    padding: 4px 8px;   /* Más pequeño para que no estorbe */
     font-family: 'Arial Black', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
+    font-size: 0.6rem;  /* Letra bien pequeña y minimalista */
+    letter-spacing: 0.5px;
     cursor: pointer;
-    z-index: 1100;
-    transition: 0.3s;
+    z-index: 2000;      /* Para que esté sobre el fondo */
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: 0.2s ease;
 }
 
 .music-control:hover {
     background: var(--ocean);
     color: white;
+}
+
+@media (max-width: 600px) {
+    .music-control {
+        top: 10px;
+        left: 10px;
+        font-size: 0.55rem;
+        padding: 3px 6px;
+    }
 }
 
 /* El cuadro del selector */
@@ -504,4 +515,25 @@ input[type="text"], textarea {
     border: 1px solid #444;
     padding: 12px;
     font-family: 'Arial', sans-serif;
+}
+
+input, textarea, select {
+    width: 92%;           /* En lugar de 100% */
+    margin: 0 auto;       /* Los centra */
+    display: block;       /* Necesario para que el centrado funcione */
+    margin-bottom: 15px;  /* Espacio entre cada cuadro */
+}
+
+.modal-content {
+    padding: 30px;        /* Aumenta este número para que todo se aleje de los bordes */
+    box-sizing: border-box; /* ¡VITAL! Esto asegura que el padding no agrande la ventana */
+    border-radius: 15px;  /* Ya que estamos, unas esquinas redondeadas quedan bien */
+}
+
+/* Y para que los cuadros se vean parejos */
+input, textarea, select {
+    width: 100%;          /* Ahora sí pueden ser 100% porque el padding del modal los frena */
+    box-sizing: border-box; /* Evita que el borde del cuadro lo saque de la caja */
+    padding: 12px;
+    margin-top: 5px;
 }
