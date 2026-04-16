@@ -185,5 +185,22 @@ window.darFuego = async (id) => {
 };
 
 const music = document.getElementById("bgMusic");
-music.play();
+const musicBtn = document.getElementById("musicToggle");
+const musicStatus = document.getElementById("musicStatus");
 
+musicBtn.onclick = () => {
+    if (music.paused) {
+        music.play().then(() => {
+            musicStatus.innerText = "SOUND OFF";
+            musicBtn.style.background = "#ff4d6d"; 
+            musicBtn.style.color = "white";
+        }).catch(error => {
+            console.log("El navegador bloqueó el audio:", error);
+        });
+    } else {
+        music.pause();
+        musicStatus.innerText = "SOUND ON";
+        musicBtn.style.background = "white";
+        musicBtn.style.color = "black";
+    }
+};
