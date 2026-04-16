@@ -191,7 +191,7 @@ const musicStatus = document.getElementById("musicStatus");
 musicBtn.onclick = () => {
     if (music.paused) {
         music.play().then(() => {
-            musicStatus.innerText = "Tu eres de los míos";
+            musicStatus.innerText = "Tú si eres de los míos";
             musicBtn.style.background = "#ff4d6d"; 
             musicBtn.style.color = "white";
         }).catch(error => {
