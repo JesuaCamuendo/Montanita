@@ -445,8 +445,8 @@ nav a:hover, nav a.active {
 
 .music-control {
     position: fixed;
-    top: 40px; /* Ajustado para que no tape tus iconos de redes */
-    left: 30px;
+    top: 12px; /* Ajustado para que no tape tus iconos de redes */
+    left: 20px;
     background: white;
     color: black;
     border: none;
